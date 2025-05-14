@@ -1,4 +1,53 @@
-h1 {
-    font: italic 48px serif;
-    color :red;
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+header {
+    color :white;
+    text-align: center;
+    background: linear-gradient(to left, red, blue, green, yellow);
+    border-radius: 3cm;
+    margin: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+header h1{
+    margin: 0;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+header:before {
+    content: "";
+    height: 20 px;
+    background: linear-gradient(to left, red, yellow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav button {
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: green;
+    background-color: wheat;
+    border-radius: 15px;
+}
+
+nav button:hover {
+    background-color: rgb(211, 191, 154);
+    cursor: pointer;
 }
