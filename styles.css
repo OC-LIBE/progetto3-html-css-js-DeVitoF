@@ -5,7 +5,7 @@ html,body {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: rgb(255, 227, 227);
 }
 
 header {
@@ -24,16 +24,6 @@ header h1{
     font-size: 6rem;
 }
 
-header:before {
-    content: "";
-    height: 20 px;
-    background: linear-gradient(to left, red, yellow);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
 nav {
     text-align: center;
 }
@@ -45,9 +35,58 @@ nav button {
     color: green;
     background-color: wheat;
     border-radius: 15px;
+    transition-duration: 0.4s;
 }
 
 nav button:hover {
     background-color: rgb(211, 191, 154);
     cursor: pointer;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main article {
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+main article a button {
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: black;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+main article a button:hover {
+    background: linear-gradient(to left, blue, aqua);
+    cursor: pointer;
+}
+
+main article:hover img {
+    transform: rotate(10deg) scale(1.4);
+}
+
+.animal-text {
+    padding: 1rem;
+}
+
+.animal-img {
+    min-width: 20rem;
+    overflow: hidden;
+}
+
+.animal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
 }
