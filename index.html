@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animali</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <link href="styles.css" rel="stylesheet" >
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,67 +15,38 @@
 
     <nav>
         <button>Show all</button>
-        <button onclick="alert('Croccantini: ' + croccantini)">Show dogs</button>
+        <button onclick="sortPet(restrict='dog')">Show dogs</button>
         <button>Show cats</button>
         <button onclick="alert('I love bunnies!')">Show bunnies</button>
     </nav>
 
     <main>
-        <article>
-            <section class="animal-text">
-                <h1> Marazza </h1>
-                <small>
-                    <span> 17 years old </span> - 
-                    <span> human, maybe </span>
-                </small>
-                <p>
-                    Lorem ipsum dolor sit amet 
-                    consectetur adipisicing elit.
-                    Inventore, sed. Hic tempore, vel
-                    molestias debitis officiis, quibusdam
-                    ipsam deleniti quisquam dolorem at
-                    fugit fuga laudantium dolore, 
-                    blanditiis maxime porro ut?
-                </p>
-                <a href="https://it.wikipedia.org/wiki/Saturno_(astronomia)" target="_blank" class="adoptbutton"> 
-                    <button> Adopt Maurice </button> 
-                </a>
-            </section>
-            <section class="animal-img">
-                <img src="static/dog2.webp">
-            </section>
-        </article>
-        <article>
-            <section class="animal-text">
-                <h1> Marazza </h1>
-                <small>
-                    <span> 17 years old </span> - 
-                    <span> human, maybe </span>
-                </small>
-                <p>
-                    Lorem ipsum dolor sit amet 
-                    consectetur adipisicing elit.
-                    Inventore, sed. Hic tempore, vel
-                    molestias debitis officiis, quibusdam
-                    ipsam deleniti quisquam dolorem at
-                    fugit fuga laudantium dolore, 
-                    blanditiis maxime porro ut?
-                </p>
-                <a href="https://it.wikipedia.org/wiki/Saturno_(astronomia)" target="_blank" class="adoptbutton"> 
-                    <button> Adopt Maurice </button> 
-                </a>
-            </section>
-            <section class="animal-img">
-                <img src="static/camaleonte.jpg">
-            </section>
-        </article>
+        <template id="animal-card-template">
+            <article>
+                <section class="animal-text">
+                    <h1 id="name"> `${petardo}` </h1>
+                    <small>
+                        <span id="birthYear"> 17 years old </span> - 
+                        <span id="species"> human, maybe </span>
+                    </small>
+                    <p id="description">
+                        Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit.
+                        Inventore, sed. Hic tempore, vel
+                        molestias debitis officiis, quibusdam
+                        ipsam deleniti quisquam dolorem at
+                        fugit fuga laudantium dolore, 
+                        blanditiis maxime porro ut?
+                    </p>
+                    <a id="anchor" href="https://it.wikipedia.org/wiki/Saturno_(astronomia)" target="_blank" class="adoptbutton"> 
+                        <button id="button"> Adopt Maurice </button> 
+                    </a>
+                </section>
+                <section class="animal-img">
+                    <img src="static/dog2.webp" id="photo">
+                </section>
+            </article>
+        </template>
     </main>
-
-    <h2>La tua cucciolata</h2>
-    <p>Oh, sembra che al momento tu non abbia nessun cucciolo...</p>
-    <p>Cosa aspetti, vai subito ad adottarne uno!</p>
-    <h2>Fabbrica di croccantini</h2>
-    <button class="favorite styled" type="button" onclick="cambiaSfondo()">Crea un croccantino</button>
-
 </body>
 </html>

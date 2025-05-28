@@ -81,6 +81,7 @@ main article:hover img {
 
 .animal-img {
     min-width: 20rem;
+    flex-basis: 20rem;
     overflow: hidden;
 }
 
