@@ -14,15 +14,16 @@
     </header>
 
     <nav>
-        <button>Show all</button>
-        <button onclick="sortPet(restrict='dog')">Show dogs</button>
-        <button>Show cats</button>
-        <button onclick="alert('I love bunnies!')">Show bunnies</button>
+        <button onclick="dontSort()">Show all</button>
+        <button onclick="sortDog()">Show dogs</button>
+        <button onclick="sortCat()">Show cats</button>
+        <button onclick="sortRabbit()">Show bunnies</button>
+
     </nav>
 
     <main>
         <template id="animal-card-template">
-            <article>
+            <article id="template">
                 <section class="animal-text">
                     <h1 id="name"> `${petardo}` </h1>
                     <small>
