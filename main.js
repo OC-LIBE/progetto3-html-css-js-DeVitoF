@@ -4,7 +4,6 @@ function onSort(filt) {
   const allClones = document.querySelectorAll(`.clone`);
   allClones.forEach(clone =>{  
     const speciesElem = clone.querySelector('#species');
-    console.log(speciesElem)
     clone.classList.remove('inv', 'vis');
     if (speciesElem.textContent.trim() == filt || filt == "All") {
       clone.classList.add('vis');
