@@ -3,8 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animali</title>
+    <link href="styles.css" rel="stylesheet" >
+    <script src="main.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>Puppy's Land</h1> 
+        <h2>Our friends need a home!</h2> 
+    </header>
+
+    <nav>
+        <button class="buttonvis" data-filter="All">Show all</button>
+        <button data-filter="Dog">Show dogs</button>
+        <button data-filter="Cat">Show cats</button>
+        <button data-filter="Rabbit">Show bunnies</button>
+
+    </nav>
+
+    <main>
+        <template id="animal-card-template">
+            <article id="template">
+                <section class="animal-text">
+                    <h1 id="name"> `${petardo}` </h1>
+                    <small>
+                        <span id="birthYear"> 17 years old </span> - 
+                        <span id="species"> human, maybe </span>
+                    </small>
+                    <p id="description">
+                        Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit.
+                        Inventore, sed. Hic tempore, vel
+                        molestias debitis officiis, quibusdam
+                        ipsam deleniti quisquam dolorem at
+                        fugit fuga laudantium dolore, 
+                        blanditiis maxime porro ut?
+                    </p>
+                    <a id="anchor" href="https://it.wikipedia.org/wiki/Saturno_(astronomia)" target="_blank" class="adoptbutton"> 
+                        <button id="button"> Adopt Maurice </button> 
+                    </a>
+                </section>
+                <section class="animal-img">
+                    <img src="static/dog2.webp" id="photo">
+                </section>
+            </article>
+        </template>
+    </main>
 </body>
 </html>
