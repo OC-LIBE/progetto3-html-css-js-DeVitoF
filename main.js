@@ -1,23 +1,8 @@
 const website = "https://frapollif.github.io/pet-adoption-data"
-let restriction = "none"
+let filter = "all"
 
-function sortDog() {
-  restriction = "dog"
-  removePets()
-  displayPets()
-}
-function sortCat() {
-  restriction = "cat"
-  removePets()
-  displayPets()
-}
-function sortRabbit() {
-  restriction = "rabbit"
-  removePets()
-  displayPets()
-}
-function dontSort() {
-  restriction = "none"
+function onSort(filt) {
+  filter = filt
   removePets()
   displayPets()
 }
@@ -60,7 +45,7 @@ async function displayPets() {
   const template = document.querySelector(`#animal-card-template`);
   const wrapper = document.querySelector('main');
   pets.forEach( pet => {
-    if (pet.species == restriction || restriction == "none") {
+    if (pet.species == filter || filter == "all") {
       // Creating clone
       const clone = template.content.cloneNode(true);
       clone.getElementById("template").classList.add("clone");
@@ -80,4 +65,8 @@ async function displayPets() {
 }
 
 // Starting app
+const filterButtons = document.querySelectorAll("nav button");
+filterButtons.forEach(button =>{
+  button.addEventListener('click',(e) => onSort(button.dataset.filter))
+})
 displayPets()
