@@ -1,0 +1,131 @@
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 227, 227);
+}
+
+header {
+    color :white;
+    text-align: center;
+    background: linear-gradient(to left, yellow, green, blue, red);
+    border-radius: 3cm;
+    margin: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+header h1{
+    margin: 0;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+nav {
+    text-align: center;
+}
+
+nav button {
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: green;
+    background-color: wheat;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+}
+
+nav button:hover {
+    background-color: rgb(211, 191, 154);
+    cursor: pointer;
+}
+
+nav .buttonvis {
+    background-color: rgb(211, 191, 154);
+    cursor: pointer;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main article {
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+main article a button {
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: black;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+main article a button:hover {
+    background: linear-gradient(to left, blue, aqua);
+    cursor: pointer;
+}
+
+main article:hover img {
+    transform: rotate(10deg) scale(1.4);
+}
+
+.animal-text {
+    padding: 1rem;
+}
+
+.animal-img {
+    min-width: 20rem;
+    flex-basis: 20rem;
+    overflow: hidden;
+}
+
+.animal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+}
+
+.vis {
+    visibility: visible;
+}
+
+.inv {
+    visibility: hidden;
+    max-height: 0;
+}
+
+@media screen and (max-width: 750px) {
+    main {
+        max-width: 500px;
+    }
+    header{
+        border-radius: 1cm;
+        margin: 10px;
+        padding: 15px;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    header h2{
+        font-size: 1rem;
+    }
+    .animal-text{
+        font-size: 12px;
+    }
+    main article a button {
+        padding: 0.5rem;
+        margin: 0.2rem;
+    }
+}
